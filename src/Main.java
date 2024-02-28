@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int array[] = readElements(readInteger());
+        int[] array = readElements(readInteger());
         System.out.println("The minimum array value is: " + findMin(array));
 
 
@@ -27,6 +27,7 @@ public class Main {
 //        for(int i =0; i<array.length; i++){
 //            if(array[i] <= min) min = array[i];
 //        }
+        //anotherway
         for(int el: array){
             if(el<min) min = el;
         }
@@ -37,8 +38,7 @@ public class Main {
     private static int readInteger(){
         System.out.println("How many elements do u want to write? ");
         Scanner scanner = new Scanner(System.in);
-        int elements = scanner.nextInt();
-        return elements;
+        return scanner.nextInt();
 
     }
 }
